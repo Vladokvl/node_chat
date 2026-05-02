@@ -40,9 +40,9 @@ const setupSocketHandlers = (io) => {
       }
     });
 
-    socket.on('createRoom', async (name, callback) => {
+    socket.on('createRoom', async (roomName, callback) => {
       try {
-        const room = await Room.create({ name });
+        const room = await Room.create({ name: roomName });
 
         io.emit('roomCreated', room);
         callback({ success: true, room });

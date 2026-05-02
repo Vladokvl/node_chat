@@ -3,10 +3,6 @@ module.exports = {
   env: {
     jest: true,
     node: true,
-    browser: true,
-  },
-  globals: {
-    io: 'readonly',
   },
   rules: {
     'no-proto': 0,
@@ -14,4 +10,16 @@ module.exports = {
     'max-len': ['error', { code: 80, ignoreComments: true }],
   },
   plugins: ['jest'],
+  overrides: [
+    {
+      files: ['src/public/js/**/*.js'],
+      env: {
+        browser: true,
+        node: false,
+      },
+      globals: {
+        io: 'readonly',
+      },
+    },
+  ],
 };
