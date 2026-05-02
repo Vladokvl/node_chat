@@ -8,6 +8,16 @@ const Message = sequelize.define('Message', {
     type: DataTypes.TEXT,
     allowNull: false,
   },
+  userId: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    references: { model: 'Users', key: 'id' },
+  },
+  roomId: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    references: { model: 'Rooms', key: 'id' },
+  },
 });
 
 module.exports = Message;
