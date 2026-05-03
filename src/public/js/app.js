@@ -1,5 +1,7 @@
 'use strict';
 
+/* eslint-env browser */
+
 /* ── Socket ──────────────────────────────────────────────────────────────── */
 const socket = io();
 

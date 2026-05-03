@@ -1,5 +1,7 @@
 'use strict';
 
+/* eslint-disable no-console */
+
 const sequelize = require('../config/db');
 const User = require('./User');
 const Room = require('./Room');

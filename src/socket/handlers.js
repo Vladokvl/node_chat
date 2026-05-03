@@ -1,5 +1,7 @@
 'use strict';
 
+/* eslint-disable no-console */
+
 const { User, Room, Message } = require('../models');
 
 const setupSocketHandlers = (io) => {
